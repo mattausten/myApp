@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DetailPage } from '../detail/detail';
+import { CalPage } from '../cal/cal';
 
 @Component({
   selector: 'page-home',
@@ -22,6 +23,10 @@ export class HomePage {
   itemSelected(item) {
 
     this.navCtrl.push(DetailPage, { item: item});
+  }
+
+  openCalPage(){
+    this.navCtrl.push(CalPage);
   }
 
 }

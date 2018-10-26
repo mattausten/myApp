@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Platform } from 'ionic-angular';
+
 
 /**
  * Generated class for the DetailPage page.
@@ -15,14 +17,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetailPage {
 
-  item: any;
+  brightness: number = 20;
+  saturation: number = 50;
+  warmth: number = 1300;
+  structure: any = {lower: 33, upper: 60};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  this.item = navParams.get('item');
+  myDate: Date = new Date();
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private platform: Platform) {
+    this.platform.ready().then(() => {
+
+    });
+
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DetailPage');
+  onChange(ev: any) {
+    console.log('Changed', ev);
   }
 
 }

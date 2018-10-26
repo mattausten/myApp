@@ -1,0 +1,55 @@
+<!--
+  Generated template for the CalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>calPage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="calendar-header">
+    <ion-row class="calendar-month">
+      <ion-col col-1 class='calendar-nav-left' (click)="goToLastMonth()">
+        <ion-icon class="calendar-nav" name="ios-arrow-back" text-center></ion-icon>
+      </ion-col>
+      <ion-col><h5>{{currentMonth}} {{currentYear}}</h5></ion-col>
+      <ion-col col-1 align-self-end class='calendar-nav-right' (click)="goToNextMonth()">
+        <ion-icon class="calendar-nav" name="ios-arrow-forward" text-center></ion-icon>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="calendar-body">
+    <ion-grid>
+      <ion-row class="calendar-weekday">         
+        <ion-col>Mon</ion-col>
+        <ion-col>Tue</ion-col>
+        <ion-col>Wed</ion-col>
+        <ion-col>Thu</ion-col>
+        <ion-col>Fri</ion-col>
+        <ion-col>Sat</ion-col>
+        <ion-col>Sun</ion-col>        
+      </ion-row>
+      <ion-row class="calendar-date">
+        <ion-col col-1 *ngFor="let lastDay of daysInLastMonth" class="last-month">
+          <span class="otherDate" text-center>{{lastDay}}</span>
+        </ion-col>        
+        <ion-col col-1 *ngFor="let day of daysInThisMonth">        
+          <span class="currentDate" text-center *ngIf="isCurrentDate(day)" (click)="dateClick(day)">{{day}}</span>
+          <span class="selected-date" text-center *ngIf="isSelectedDate(day)" (click)="dateClick(day)">{{day}}</span>
+          <span class="otherDate" text-center *ngIf="isOtherDateEnabled(day)" (click)="dateClick(day)">{{day}}</span>       
+          <span class="otherDate disabled-date" text-center *ngIf="isOtherDateDisabled(day)" (click)="dateClick(day)">{{day}}</span>
+        </ion-col>        
+        <ion-col col-1 *ngFor="let nextDay of daysInNextMonth" class="next-month">
+          <span class="otherDate" text-center>{{nextDay}}</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

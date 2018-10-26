@@ -14,3 +14,54 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+/*******************************
+* Ionic Range (IOS) CSS override 
+********************************/
+
+.range-ios .range-knob {
+    left: 8px;
+    top: 3px;
+}
+
+.range-ios-secondary .range-pin {
+	z-index: 100;
+    top: 2px;
+    left: 1px;
+	-webkit-transform: translate3d(0,  0,  0) scale(1);
+    transform: translate3d(0,  0,  0) scale(1);
+    color: #6dacc5;
+    font-size: 13px !important;
+}
+
+.range-ios-secondary .label-ios {
+    font-size: 13px !important;
+}
+
+.range-ios-secondary {
+    background: #6dacc5;
+    border-radius: 10px;
+    color: white;
+    padding: 0 10pt 0 10pt !important;
+}
+
+.range-ios-secondary .range-bar,
+.range-ios-secondary .range-bar-active  {
+    visibility:  hidden !important;
+}
+
+.range-ios-secondary .range-tick {
+    width: 3px;
+    height: 3px;
+    top: 16px;
+    border-radius: 4px;
+    background: #ffffff;
+}
+
+.range-ios-secondary .range-tick{
+    height: 3px;
+}
+
+.range-ios-secondary .range-slider {
+    height: 35px;
+}

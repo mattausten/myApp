@@ -1,0 +1,103 @@
+page-cal {
+
+    [col-1] {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 8.33333%;
+        -ms-flex: 0 0 8.33333%;
+        flex: 0 0 14.285714285714286%;
+        width: 14.285714285714286%;
+        max-width: 14.285714285714286%;
+      }
+      .col {
+        text-align: center;
+        padding: 5px;
+        height: 35px;
+      }
+
+      .calendar-nav-left {
+        margin-top: -2.5px;
+        // padding-left: 15px;
+        // text-align: left !important;
+      }
+
+      .calendar-nav-right {
+        margin-top: -2.5px;
+        // padding-right: 15px;
+        // text-align: right !important;
+      }
+
+      .last-month, .next-month {
+        color: #d4d3d3;
+        font-size: 90%;
+      }
+
+      .disabled-date{     
+        color: #d4d3d3;
+        font-size: 90%;
+      }
+
+      .calendar-header {
+        //background-color: #1a732d;
+        //color: #FFFFFF;
+        color: #E6A82E;        
+      }
+      .calendar-nav {
+          color: #dad8d8;
+          font-size: 16pt;
+          
+      }
+      .event-bullet {
+        margin: 2px auto;
+        height: 5px;
+        width: 5px;
+        background-color: green;
+        border-radius: 30px;
+      }
+      .currentDate, .otherDate, .selected-date {
+        padding: 8px;
+        width: 33px;
+        display: inline-block;
+      }
+      .currentDate {        
+        //background-color: #FCC958;
+        background-color: rgb(247, 219, 158);
+        color: #686868;
+        border-radius: 30px;
+        //opacity: 40%;        
+      }      
+      .selected-date {
+        background-color: #29AFAD;// #8CD8FF;//linear-gradient(#8CD8FF,#29AFAD);
+        background-image: linear-gradient(to right, #8CD8FF , #29AFAD);
+        
+        color: #ffffff;
+        border-radius: 30px;
+        opacity: 75%;
+      }
+      .unselected-date {
+        border: none;
+      }
+      .calendar-body {
+
+        .grid {
+          padding: 0;
+        }
+        .col:last-child {
+          border-right: none;
+        }
+        .calendar-weekday, .calendar-date {
+          text-align: center;
+          margin: 0;
+          border: none !important;
+        }
+        //.calendar-weekday {
+          //font-weight: bold;
+          //border-bottom: solid 1px #1a732d;
+          //background-color: #26ab56;
+        //}
+        .calendar-date {
+          border-top: solid 1px #1a732d;
+          border-bottom: solid 1px #1a732d;
+        }
+      }
+
+}
